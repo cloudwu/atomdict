@@ -1,8 +1,8 @@
 ## Atom Dict
 
-Atomdict implement a data structure for multi lua state.
+Atomdict implements a data structure for multi lua state.
 
-You can use it in multi-threads , create one lua state per thread. Atomdict will helps you to exchange a group data atomic between lua states.
+You can use it in multi-threads , create one lua state per thread. Atomdict will help you exchange a group data atomic between lua states.
 
 ## Quick Example
 
@@ -41,13 +41,13 @@ In data client :
 ### atomdict.new_handle( { key = value(number or string) , ... } , [typename] )
 
   Use a table to init atomdict . You can name the type.
-  If you have many objects with the same structure , give a typename will improve the performance.
+  If you have many objects with the same structure , giving a typename will improve the performance.
 
   It returns an integer handle.
 
 ### atomdict.delete_handle( handle )
 
-  Delete a atomdict handle. You must delete it before none of the object binding to the handle.
+  Delete an atomdict handle. You must delete it before none of the object binding to the handle.
 
 ### atomdict.new(handle)
 
@@ -56,7 +56,7 @@ In data client :
 
 ### atomdict.barrier()
 
-  Call barrier for commit atomdict objects that their changes could be been by others.
+  Call barrier to commit atomdict objects that their changes could be seen by others.
 
 ### atomdict.dump(object)
 

@@ -7,7 +7,7 @@
 	integer new_handle( { keyname = initvalue , ... } , typename or nil)  -- create an atomdict handle 
 	delete_handle(integer handle)	-- release an atomdict handle
 	userdata:object new(integer handle) -- create an atomdict object from a handle
-	barrier()	-- call barrier for commit atomdict objects
+	barrier()	-- call barrier to commit atomdict objects
 	dump(object) -- dump for debug
 	dump_handle(handle) 
  */
