@@ -38,26 +38,31 @@ In data client :
 
 ## API
 
-atomdict.new_handle( { key = value(number or string) , ... } , [typename] )
+### atomdict.new_handle( { key = value(number or string) , ... } , [typename] )
+
   Use a table to init atomdict . You can name the type.
   If you have many objects with the same structure , give a typename will improve the performance.
 
   It returns an integer handle.
 
-atomdict.delete_handle( handle )
+### atomdict.delete_handle( handle )
+
   Delete a atomdict handle. You must delete it before none of the object binding to the handle.
 
-atomdict.new(handle)
+### atomdict.new(handle)
+
   Create an object binding the atomdict handle.
   It returns an userdata like a table.
 
-atomdict.barrier()
+### atomdict.barrier()
+
   Call barrier for commit atomdict objects that their changes could be been by others.
 
-atomdict.dump(object)
+### atomdict.dump(object)
+
   Print the object to the stdout. (for debug)
 
-atomdict.dump_handle(handle) 
+### atomdict.dump_handle(handle) 
   Print the handle to the stdout. (for debug)
 
 ## Question ?
