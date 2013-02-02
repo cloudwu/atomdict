@@ -18,7 +18,7 @@ local function dump_object(obj)
 	return "thread["..thread.."]"..table.concat(t," ")
 end
 
-print(dump_object(c))
+io.write(dump_object(c) .. "\n")
 
 local function sum_object(obj)
 	local s = 0

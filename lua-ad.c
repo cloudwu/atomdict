@@ -359,8 +359,6 @@ int
 luaopen_atomdict(lua_State *L) {
 	luaL_checkversion(L);
 
-	// stack now : barrier 
-
 	luaL_Reg l[] = {
 		{ "new_handle", _new_handle },
 		{ "delete_handle", _delete_handle },
