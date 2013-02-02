@@ -179,13 +179,14 @@ atomdict_key(struct atomdict *ad, int n, struct atomslot *slot) {
 	const char * key = ad->key[n].key;
 	if (slot) {
 		slot->key = key;
+		struct atomcol *c = &(ad->col[ad->current]);
 		switch (ad->key[n].type) {
 		case ATOMDICT_NUMBER:
 			slot->vs = NULL;
-			slot->vn = ad->col[ad->current].v[n].n;
+			slot->vn = c->v[n].n;
 			break;
 		case ATOMDICT_STRING:
-			slot->vs = COL_STRING(ad->col, n);
+			slot->vs = COL_STRING(c, n);
 			slot->vn = 0;
 			break;
 		}
